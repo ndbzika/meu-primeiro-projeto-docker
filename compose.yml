@@ -1,0 +1,12 @@
+services:
+  apache:
+    image: httpd:latest
+      - ports: "80:80"
+    volumes:
+      - /data/html/:/usr/local/apache2/htdocs/
+    network:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge
