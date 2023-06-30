@@ -5,7 +5,7 @@ services:
       - "80:80"
     volumes:
       - /data/html/:/usr/local/apache2/htdocs/
-    network:
+    networks:
       - minha-rede
 
 networks:
